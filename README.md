@@ -89,21 +89,13 @@ By completing this game, you'll practice:
 These skills are directly transferable to real-world data analysis work.
 
 ---
+## Table schema construction Phase 
 
-## 🚀 Getting Started
+# date 3 oct 2026 # 
 
-```bash
-# Clone the repository
-git clone <your-repo-url>
-cd sql-murder-mystery
-
-# Load the database (example for SQLite)
-sqlite3 sql_manor.db < schema.sql
-sqlite3 sql_manor.db < seed_data.sql
-
-# Start querying!
-sqlite3 sql_manor.db
-```
+- case tables :
+  ** College Event , Trip , Police Station **
+# to be continue  
 
 ---
 
