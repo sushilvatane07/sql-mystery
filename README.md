@@ -94,7 +94,7 @@ These skills are directly transferable to real-world data analysis work.
 # date 3 oct 2026 # 
 
 - case tables :
-  ** College Event , Trip , Police Station **
+  ** College Event , Trip , Police Station , suspects , evidence **
 # to be continue  
 
 ---
