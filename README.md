@@ -74,19 +74,108 @@ All data is fictional and logically consistent, allowing players to solve the my
 
 ---
 
-## 🎓 Learning Outcomes
+### `crime_scene`
 
-By completing this game, you'll practice:
+| crime_id | date | location | crime_type | description |
+|---|---|---|---|---|
+| 101 | 2026-09-15 | City Library | Murder | Victim found dead at 9:30 PM |
+| 102 | 2026-09-16 | Central Park | Theft | Valuable watch reported missing |
+| 103 | 2026-09-17 | Old Warehouse | Murder | Body discovered near the entrance |
 
-- `SELECT` statements to retrieve data
-- `WHERE` clauses to filter results
-- `JOIN` operations to combine tables
-- `GROUP BY` and aggregate functions
-- `ORDER BY` for sorting
-- Subqueries and nested queries
-- Logical reasoning and data correlation
+### `victims`
 
-These skills are directly transferable to real-world data analysis work.
+| victim_id | name | age | occupation | last_seen_location |
+|---|---|---|---|---|
+| 1 | Robert Hayes | 42 | Businessman | City Library |
+| 2 | Emily Carter | 29 | Journalist | Central Park |
+| 3 | Michael Brown | 35 | Shopkeeper | Old Warehouse |
+
+### `suspects`
+
+| suspect_id | name | age | occupation | motive |
+|---|---|---|---|---|
+| 1 | Daniel Smith | 38 | Business Partner | Financial Dispute |
+| 2 | Olivia Wilson | 31 | Journalist | Professional Rivalry |
+| 3 | James Miller | 45 | Security Guard | Personal Revenge |
+| 4 | Sophia Davis | 27 | Accountant | Blackmail |
+| 5 | Ethan Taylor | 34 | Businessman | Property Dispute |
+
+### `witnesses`
+
+| witness_id | name | statement | confidence_level |
+|---|---|---|---|
+| 1 | John Parker | Saw a person leaving the library | High |
+| 2 | Sarah Johnson | Heard an argument before the incident | Medium |
+| 3 | David Wilson | Noticed a suspicious vehicle nearby | High |
+| 4 | Rachel Adams | Saw someone near the warehouse entrance | Low |
+
+### `alibis`
+
+| alibi_id | suspect_id | claimed_location | claimed_time | verified |
+|---|---|---|---|---|
+| 1 | 1 | Office | 08:30 PM | Yes |
+| 2 | 2 | Coffee Shop | 09:00 PM | No |
+| 3 | 3 | City Library | 09:15 PM | No |
+| 4 | 4 | Home | 08:45 PM | Yes |
+| 5 | 5 | Parking Lot | 09:20 PM | No |
+
+### `evidence`
+
+| evidence_id | crime_id | evidence_type | description | found_location |
+|---|---|---|---|---|
+| 1 | 101 | Fingerprint | Partial fingerprint on a glass | Reading Room |
+| 2 | 101 | CCTV Footage | Unknown person entering the building | Main Entrance |
+| 3 | 101 | Mobile Phone | Phone found near the victim | Bookshelf 12 |
+| 4 | 103 | Weapon | Knife recovered near the body | Warehouse Entrance |
+| 5 | 103 | Footprint | Muddy footprints leading outside | Back Door |
+
+### `forensic_reports`
+
+| report_id | evidence_id | analysis_result | suspect_match |
+|---|---|---|---|
+| 1 | 1 | Fingerprint partially recovered | Suspect 3 |
+| 2 | 2 | Person entered at 09:05 PM | Unknown |
+| 3 | 3 | Last call made at 08:55 PM | Suspect 1 |
+| 4 | 4 | Fingerprints detected on handle | Suspect 5 |
+| 5 | 5 | Shoe pattern identified | Suspect 2 |
+
+### `phone_records`
+
+| call_id | caller_id | receiver_id | call_time | duration_minutes |
+|---|---|---|---|---|
+| 1 | 1 | 4 | 08:30 PM | 4 |
+| 2 | 2 | 3 | 08:45 PM | 7 |
+| 3 | 3 | 1 | 08:55 PM | 2 |
+| 4 | 5 | 2 | 09:10 PM | 5 |
+| 5 | 4 | 1 | 09:15 PM | 3 |
+
+### `suspect_relationships`
+
+| relationship_id | suspect_id | related_suspect_id | relationship_type |
+|---|---|---|---|
+| 1 | 1 | 4 | Business Partners |
+| 2 | 2 | 3 | Former Colleagues |
+| 3 | 3 | 5 | Financial Associates |
+| 4 | 4 | 5 | Family Friends |
+| 5 | 1 | 5 | Business Rivals |
+
+### `interrogations`
+
+| interrogation_id | suspect_id | interrogation_date | response | suspicious_behavior |
+|---|---|---|---|---|
+| 1 | 1 | 2026-09-16 | Denied visiting the library | Avoided eye contact |
+| 2 | 2 | 2026-09-16 | Claimed to be at a coffee shop | Changed statement |
+| 3 | 3 | 2026-09-16 | Denied knowing the victim | Nervous behavior |
+| 4 | 4 | 2026-09-16 | Confirmed being at home | Consistent statement |
+| 5 | 5 | 2026-09-16 | Refused to explain whereabouts | Contradictory answers |
+
+### `case_status`
+
+| case_id | crime_id | assigned_detective | status | final_verdict |
+|---|---|---|---|---|
+| 1 | 101 | Detective Morgan | Under Investigation | Pending |
+| 2 | 102 | Detective Lewis | Closed | Theft Solved |
+| 3 | 103 | Detective Morgan | Under Investigation | Pending |
 
 ---
 ## Table schema construction Phase 
