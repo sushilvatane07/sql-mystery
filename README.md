@@ -60,7 +60,7 @@ The game includes a series of guided questions (basic → advanced) and an answe
 
 ---
 
-## 🗄️ Database Schema
+## 🗄️ Database Schema ( * for example purpose only table schema and data may vary * )
 
 | Table | Description |
 |---|---|
